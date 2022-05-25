@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '94381ba2d1e2e715045b7a4315226ddbe571ff5c',
+        'reference' => 'e43290b6c82f8f44a3e54465229c1578869765d2',
         'name' => 'maxoliveirajr/e-commerce',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '94381ba2d1e2e715045b7a4315226ddbe571ff5c',
+            'reference' => 'e43290b6c82f8f44a3e54465229c1578869765d2',
             'dev_requirement' => false,
         ),
         'phpmailer/phpmailer' => array(
