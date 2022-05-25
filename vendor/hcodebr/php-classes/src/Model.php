@@ -18,7 +18,7 @@
                     break;
                 case "set":
                     $this->values[$fielName] = $args[0];
-
+                    break;
               }
               
         }
