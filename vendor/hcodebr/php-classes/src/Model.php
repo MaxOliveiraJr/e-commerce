@@ -14,7 +14,7 @@
               switch($method)
               {
                 case "get":
-                    $this->values[$fielName];
+                    return $this->values[$fielName];
                     break;
                 case "set":
                     $this->values[$fielName] = $args[0];
@@ -25,7 +25,7 @@
 
         public function setData($data = array()){
             foreach($data as $key => $value){
-                $this->{"set".$key}($value);
+                $this->{"set".$key}($value);              
             }
         }
 
