@@ -1,0 +1,8 @@
+BD_USER_NAME = 'localhost'
+BD_PASSWORD = 'root'
+BD_HOSTNAME = 'root'
+BD_NAME = 'db'
+
+MAIL_USERNAME = 'email@gmail.com'
+MAIL_PASSWORD = 'password'
+MAIL_NAMEFROM = 'emailname'
