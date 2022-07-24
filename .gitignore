@@ -4,4 +4,4 @@ composer.lock
 /vendor/*
 !/vendor/hcodebr
 
-/views-cache/*
+/views-cache/*.php
