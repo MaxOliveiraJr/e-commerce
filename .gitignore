@@ -3,3 +3,5 @@ composer.lock
 !/vendor
 /vendor/*
 !/vendor/hcodebr
+
+/view-cache/*
