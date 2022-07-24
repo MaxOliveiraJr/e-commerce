@@ -1,2 +1,6 @@
 composer.lock
 .env
+
+!/vendor
+/vendor/*
+!/vendor/hcode
