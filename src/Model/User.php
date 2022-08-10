@@ -2,7 +2,7 @@
 
 namespace Hcode\Model;
 
-use \Hcode\DB\Sql;
+use \Hcode\database\Sql;
 use \Hcode\Model;
 use \Hcode\Mailer;
 
