@@ -24,7 +24,6 @@ class User extends Model
             ":LOGIN" => $login
         ));
 
-
         if (count($results) === 0) {
             throw new \Exception("Usuário inexistente ou senha inválida");
         }
@@ -33,6 +32,8 @@ class User extends Model
 
 
         if (password_verify($password, $data["despassword"]) === true) {
+
+            
             $user = new User();
 
             $user->setData($data);

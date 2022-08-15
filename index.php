@@ -255,4 +255,6 @@ $app->get("/categories/:idcategory", function ($idcategory) {
 	]);
 });
 
+require_once("admin-products.php");
+
 $app->run();
