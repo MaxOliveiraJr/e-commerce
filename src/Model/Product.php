@@ -16,18 +16,25 @@ class Product extends Model
         return $sql->select("SELECT * FROM tb_products ORDER BY desproduct");
     }
 
+    public static function checkLIst($list)
+    {
+
+        foreach ($list as &$row) {
+            $p = new Product();
+            $p->setData($row);
+            $row = $p->getValues();
+        }
+
+        return $list;
+    }
+
+    
     public function save()
     {
         $sql = new Sql();
 
 
-        echo $this->getdesproduct();
-        echo $this->getvlprice();
-        echo $this->getvlwidth();
-        echo $this->getvlheight();
-        echo $this->getvllength();
-        echo $this->getvlweight();
-        echo $this->getdesurl();
+
         $results = $sql->select(
             "CALL sp_products_save(:idproduct, :desproduct, :vlprice, :vlwidth, :vlheight,  :vllength,:vlweight ,:desurl)",
             array(
@@ -106,13 +113,13 @@ class Product extends Model
 
     public function setPhoto($file)
     {
-        $extension = explode(".",$file["name"]);
+        $extension = explode(".", $file["name"]);
         $extension = end($extension);
 
         echo $extension;
-        
 
-        switch($extension){
+
+        switch ($extension) {
             case "jpg":
             case "jpeg":
                 $image = imagecreatefromjpeg($file["tmp_name"]);
@@ -133,7 +140,7 @@ class Product extends Model
             "products" . DIRECTORY_SEPARATOR .
             $this->getidproduct() . ".jpg";
 
-        imagejpeg($image,$dist);
+        imagejpeg($image, $dist);
         imagedestroy($image);
 
         $this->checkPhoto();

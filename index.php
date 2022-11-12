@@ -7,6 +7,9 @@ use \Hcode\Page;
 use \Hcode\PageAdmin;
 use \Hcode\Model\User;
 use \Hcode\Model\Category;
+use Hcode\Model\Product;
+
+
 
 $app = new Slim();
 
@@ -14,9 +17,19 @@ $app->config('debug', true);
 
 $app->get('/', function () {
 
+	function formatPrice($vlPrice)
+	{
+		return number_format($vlPrice, 2, ",", ".");
+	}
+
+
+	$products = Product::listAll();
+
 	$page = new Page();
 
-	$page->setTpl("index");
+	$page->setTpl("index", [
+		'products' => Product::checkList($products),
+	]);
 });
 
 $app->get('/admin', function () {
